@@ -1,0 +1,22 @@
+{
+  "name": "guestbook",
+  "version": "0.0.0",
+  "description": "An API for reviews of guests",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ipelovski/guestbook.git"
+  },
+  "author": "Ivan Pelovski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ipelovski/guestbook/issues"
+  },
+  "homepage": "https://github.com/ipelovski/guestbook#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
