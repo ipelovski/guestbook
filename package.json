@@ -4,7 +4,7 @@
   "description": "An API for reviews of guests",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "node ./node_modules/.bin/mocha tests/*.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/ipelovski/guestbook#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-validation": "^3.0.5"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.1.1"
   }
 }
