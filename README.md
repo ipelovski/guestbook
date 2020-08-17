@@ -2,12 +2,15 @@
 
 A sample application for writing user reviews and searching them.
 
+Install with `npm install`
+Run with `npm start`
+
 Starting point: index.js
 Defining express app and routes: app.js
 Basic authentication middleware: basic-authentication.js
 Review class: review.js
 Service for persisting reviews: review-repository.js
-Tests tests/*.js
+Tests: tests/*.js
 
 ##### Submitting a new review
 curl -i -X POST -H 'Content-Type: application/json' -d '{"authorName":"john doe","body":"very nice"}' http://localhost:8080/submit -u john:john
