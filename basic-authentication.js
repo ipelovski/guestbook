@@ -12,7 +12,7 @@ function createMiddleware(options) {
     const requireAuthentication = () => {
       res.set('WWW-Authenticate', `Basic realm="${realm}"`);
       return res.status(401).end();
-    }
+    };
     let credentials = readCredentials(req);
     if (credentials === null) {
       requireAuthentication();
@@ -21,7 +21,7 @@ function createMiddleware(options) {
       try {
         let authentication = authenticate(credentials.username, credentials.password);
         if (authentication instanceof Promise) {
-          authentication.then(next).catch(requireAuthenticationres);
+          authentication.then(next).catch(requireAuthentication);
         }
         else {
           if (authentication) {

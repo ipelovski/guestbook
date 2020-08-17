@@ -1,6 +1,6 @@
 'use strict';
 
-const mocha = require('mocha');
+const { describe, it } = require('mocha');
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const ReviewRepository = require('../review-repository');

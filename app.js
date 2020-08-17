@@ -15,7 +15,7 @@ const users = {
 };
 const admins = {
   admin: 'admin'
-}
+};
 const oneOf = function(users) {
   return function(username, password) {
     if (username in users) {
@@ -25,7 +25,7 @@ const oneOf = function(users) {
       return false;
     }
   };
-}
+};
 const userAuthorized = basicAuthentication({
   realm,
   authenticate: oneOf(users)
@@ -80,6 +80,9 @@ function createApp(options = {}) {
   });
 
   app.use(function(err, req, res, next) {
+    if (res.headersSent) {
+      return next(err);
+    }
     if (err instanceof ValidationError) {
       return res.status(err.statusCode).json(err);
     }

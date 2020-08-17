@@ -6,7 +6,7 @@ const path = require('path');
 const defaultFileName = './reviews.json';
 
 function all() {
-  return (review) => true;
+  return () => true;
 }
 function and(functionA, functionB) {
   return (review) => functionA(review) && functionB(review);
@@ -79,6 +79,6 @@ class ReviewRepository {
       // pokemon catch
     }
   }
-};
+}
 
 module.exports = ReviewRepository;

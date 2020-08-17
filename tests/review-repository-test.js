@@ -1,6 +1,6 @@
 'use strict';
 
-const mocha = require('mocha');
+const { describe, it, afterEach } = require('mocha');
 const { expect } = require('chai');
 const ReviewRepository = require('../review-repository');
 const Review = require('../review');
